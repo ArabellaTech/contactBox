@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 from django.forms import ModelForm
-from django.contrib.localflavor.us.forms import USPhoneNumberField
+from localflavor.us.forms import USPhoneNumberField
 
 from contactBox.models import Message
 

@@ -9,7 +9,7 @@ admin.autodiscover()
 
 urlpatterns = patterns(
     '',
-    url(r"^admin/", include(admin.site.urls)),
-    url(r"^js-tests/(?P<path>.*)",
-        'contactBox.views.qunit_view',
-        name='qunit'),)
+    url(r"^admin/", include(admin.site.urls)),)
+#    url(r"^js-tests/(?P<path>.*)",
+#        'contactBox.views.qunit_view',
+#       name='qunit'),)
