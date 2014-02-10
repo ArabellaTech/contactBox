@@ -3,7 +3,7 @@ PATH=/sbin:/bin:/usr/sbin:/usr/bin
 NICE=15
 MAILTO=team@ydtechnology.com
 
-DIR=/home/XX/XXX/ContactBox/
+DIR=/home/XX/XXX/contactBox/
 
 # m h  dom mon dow u   command
 #5 * * * *       contactbox   cd $DIR && python manage.py remind_contact
