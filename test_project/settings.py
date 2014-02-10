@@ -6,7 +6,7 @@ INSTALLED_APPS = (
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
-    'contactbox',
+    'contactBox',
 )
 DATABASES = {
     'default': {
@@ -31,3 +31,8 @@ STATICFILES_DIRS = [
 SECRET_KEY = 'fake'
 
 ROOT_URLCONF = 'test_project.urls'
+
+try:
+    from local_settings import *
+except ImportError:
+    pass

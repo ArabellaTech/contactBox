@@ -36,3 +36,5 @@ nosetests.xml
 .settings
 setup2.py
 test_settings.py
+local_settings.py
+manage.py
