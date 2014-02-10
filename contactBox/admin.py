@@ -3,6 +3,7 @@ from django.contrib import admin
 from django.contrib.admin.util import unquote
 from models import Message, Receiver
 
+
 class MessageAdmin(admin.ModelAdmin):
     list_display = ('title', 'name', 'organization', 'notification_date')
     readonly_fields = ('date',)
@@ -21,7 +22,7 @@ class MessageAdmin(admin.ModelAdmin):
             obj.save()
 
         return super(MessageAdmin, self).change_view(request, object_id,
-            extra_context=extra_context)
+                                                     extra_context=extra_context)
 
 admin.site.register(Message, MessageAdmin)
 admin.site.register(Receiver)
