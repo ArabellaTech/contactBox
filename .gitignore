@@ -38,4 +38,4 @@ setup2.py
 test_settings.py
 local_settings.py
 manage.py
-/site_media
+site_media
