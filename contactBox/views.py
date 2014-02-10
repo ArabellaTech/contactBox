@@ -6,8 +6,6 @@ from forms import ContactForm
 
 class ContactFormView(TemplateView):
     template_name = 'contact.html'
-    login_prefix = 'login'
-    pesel_prefix = 'pesel'
 
     def get_context_data(self, *args, **kwargs):
         context = super(ContactFormView, self).get_context_data(*args, **kwargs)
