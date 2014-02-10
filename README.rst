@@ -36,5 +36,7 @@ in views.py:
         template_name = 'contact.html'
 
 Please also check:
+
 https://github.com/YD-Technology/contactBox/blob/master/contactBox/views.py
+
 https://github.com/YD-Technology/contactBox/blob/master/test_project/templates/contact.html
