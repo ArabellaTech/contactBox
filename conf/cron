@@ -1,0 +1,12 @@
+SHELL=/bin/sh
+PATH=/sbin:/bin:/usr/sbin:/usr/bin
+NICE=15
+MAILTO=team@ydtechnology.com
+
+DIR=/home/XX/XXX/ContactBox/
+
+# m h  dom mon dow u   command
+#5 * * * *       contactbox   cd $DIR && python manage.py remind_contact
+
+
+#http://en.wikipedia.org/wiki/CRON_expression

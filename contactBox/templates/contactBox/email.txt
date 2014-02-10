@@ -4,4 +4,4 @@ Organization: {{contact.organization}}
 Phone: {{contact.phone}}
 Brief Message: {{contact.short}}
 
-Read more on http://{{site.domain}}{% url admin:contactBox_message_change contact.id %}
+Read more on http://{{site.domain}}{% url "admin:contactBox_message_change" contact.id %}
