@@ -2,6 +2,8 @@
 Contact Box
 ***********
 
+.. image:: https://travis-ci.org/YD-Technology/contactBox.png?branch=master   :target: https://travis-ci.org/YD-Technology/contactBox
+
 To use as standard contact form replacement
 
 .. contents::
