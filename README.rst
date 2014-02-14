@@ -5,8 +5,9 @@ Contact Box
 .. image:: https://travis-ci.org/YD-Technology/contactBox.png?branch=master   
    :target: https://travis-ci.org/YD-Technology/contactBox
 
-.. image:: https://coveralls.io/repos/YD-Technology/contactBox/badge.png
-   :target: https://coveralls.io/r/YD-Technology/contactBox
+.. image:: https://coveralls.io/repos/YD-Technology/contactBox/badge.png?branch=master
+  :target: https://coveralls.io/r/YD-Technology/contactBox?branch=master
+
 
 
 To use as standard contact form replacement
