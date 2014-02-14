@@ -2,11 +2,11 @@
 Contact Box
 ***********
 
-.. image:: https://travis-ci.org/YD-Technology/contactBox.png?branch=master   :target: https://travis-ci.org/YD-Technology/contactBox
-
+.. image:: https://travis-ci.org/YD-Technology/contactBox.png?branch=master   
+   :target: https://travis-ci.org/YD-Technology/contactBox
 
 .. image:: https://coveralls.io/repos/YD-Technology/contactBox/badge.png
-  :target: https://coveralls.io/r/YD-Technology/contactBox
+   :target: https://coveralls.io/r/YD-Technology/contactBox
 
 
 To use as standard contact form replacement
