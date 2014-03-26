@@ -38,10 +38,12 @@ in views.py:
 ::
 
     from contactBox.views import ContactFormView
+    from contactBox.forms import ContactForm
 
 
     class ContactView(ContactFormView):
         template_name = 'contact.html'
+        form_class = ContactForm
 
 Please also check:
 

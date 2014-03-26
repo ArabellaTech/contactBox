@@ -5,22 +5,23 @@ from forms import ContactForm
 
 
 class ContactFormView(TemplateView):
+    form_class = ContactForm
     template_name = 'contact.html'
 
     def get_context_data(self, *args, **kwargs):
         context = super(ContactFormView, self).get_context_data(*args, **kwargs)
-        context['form'] = ContactForm()
+        context['form'] = self.form_class()
         return context
 
     def post(self, request, *args, **kwargs):
         context = self.get_context_data(*args, **kwargs)
-        form = ContactForm(
+        form = self.form_class(
             data=request.POST,
         )
         if form.is_valid():
             form.save()
             context['saved'] = True
             messages.add_message(request, messages.INFO, 'Your message has been sent.')
-            form = ContactForm()
+            form = self.form_class()
         context['form'] = form
         return self.render_to_response(context)
