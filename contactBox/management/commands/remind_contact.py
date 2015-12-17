@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-from django.core.management.base import LabelCommand
+from django.core.management.base import BaseCommand
 from django.db.models import Q
 
 from contactBox.models import Message
@@ -7,7 +7,7 @@ from contactBox.models import Message
 from datetime import datetime, timedelta
 
 
-class Command(LabelCommand):
+class Command(BaseCommand):
     help = "Remind about Contact message"
     args = ''
 
