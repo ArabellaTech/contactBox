@@ -22,6 +22,7 @@ import fnmatch
 patterns = (
     "contactbox.migrations.*",
     "contactbox.tests.*",
+    "contactbox.templates.*",
     "contactbox.test_proj.*",
     # "contactbox.urls",
     "contactbox.__init__",
