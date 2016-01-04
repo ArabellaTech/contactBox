@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 from django.contrib import admin
 from django.contrib.admin.utils import unquote
-from models import Message, Receiver
+from contactbox.models import Message, Receiver
 
 
 class MessageAdmin(admin.ModelAdmin):
