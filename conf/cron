@@ -6,7 +6,7 @@ MAILTO=team@ydtechnology.com
 DIR=/home/XX/XXX/contactbox/
 
 # m h  dom mon dow u   command
-15 */1 * * *    cd $DIR && $PYTHON_DIR manage.py remind_contact
+15 * * * *    cd $DIR && $PYTHON_DIR manage.py remind_contact
 
 
 #http://en.wikipedia.org/wiki/CRON_expression
