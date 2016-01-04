@@ -18,8 +18,8 @@ except IOError as err:
     sys.exit(1)
 
 extra_kwargs = {}
-#extra_kwargs = {'tests_require': ['mock>1.0']}
-#if sys.version_info < (2, 7):
+# extra_kwargs = {'tests_require': ['mock>1.0']}
+# if sys.version_info < (2, 7):
 #    extra_kwargs['tests_require'].append('unittest2')
 
 contactbox = __import__('contactbox')
@@ -46,7 +46,7 @@ setup(
     packages=find_packages(),
     license='MIT',
     scripts=[],
-    test_suite="test_project.runtests.runtests",
+    test_suite='contactbox.test_runner.build_suite',
     include_package_data=True,
     classifiers=[
         'Development Status :: 5 - Production/Stable',
