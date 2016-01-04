@@ -14,10 +14,10 @@ install:
  - pip install $DJANGO
 
 script:
-  - coverage run --source=contactBox setup.py test
+  - coverage run --source=contactbox setup.py test
 
 after_success:
-  - coverage report --omit="contactBox/tests/*" -m
+  - coverage report --omit="contactbox/tests/*" -m
   - coveralls
 
 notifications:

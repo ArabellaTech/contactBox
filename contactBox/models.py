@@ -33,9 +33,9 @@ class Message(models.Model):
         if receivers.count():
             try:
                 site = Site.objects.get_current()
-                text_content = render_to_string('contactBox/email.txt',
+                text_content = render_to_string('contactbox/email.txt',
                                                 {'contact': self,
-                                                'site': site, })
+                                                 'site': site, })
                 msg = EmailMessage(
                     settings.EMAIL_SUBJECT_PREFIX + ' Contact',
                     text_content,

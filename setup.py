@@ -21,7 +21,7 @@ extra_kwargs = {}
 #if sys.version_info < (2, 7):
 #    extra_kwargs['tests_require'].append('unittest2')
 
-contactbox = __import__('contactBox')
+contactbox = __import__('contactbox')
 
 requirements = local_open('requirements.txt')
 required_to_install = []
@@ -33,7 +33,7 @@ for dist in requirements.readlines():
         required_to_install.append(dist)
 
 setup(
-    name='contactBox',
+    name='contactbox',
     version=contactbox.get_version(),
     url='https://github.com/YD-Technology/contactbox',
     author='YD Technology',

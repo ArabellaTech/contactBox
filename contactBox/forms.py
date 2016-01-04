@@ -2,7 +2,7 @@
 from django.forms import ModelForm
 from localflavor.us.forms import USPhoneNumberField
 
-from contactBox.models import Message
+from contactbox.models import Message
 
 
 class ContactForm(ModelForm):

@@ -7,7 +7,7 @@ INSTALLED_APPS = (
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'localflavor',
-    'contactBox',
+    'contactbox',
 )
 DATABASES = {
     'default': {

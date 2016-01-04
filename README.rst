@@ -2,11 +2,11 @@
 Contact Box
 ***********
 
-.. image:: https://travis-ci.org/ArabellaTech/contactBox.png?branch=master
-   :target: https://travis-ci.org/ArabellaTech/contactBox
+.. image:: https://travis-ci.org/ArabellaTech/contactbox.png?branch=master
+   :target: https://travis-ci.org/ArabellaTech/contactbox
 
-.. image:: https://coveralls.io/repos/ArabellaTech/contactBox/badge.png?branch=master
-  :target: https://coveralls.io/r/ArabellaTech/contactBox?branch=master
+.. image:: https://coveralls.io/repos/ArabellaTech/contactbox/badge.png?branch=master
+  :target: https://coveralls.io/r/ArabellaTech/contactbox?branch=master
 
 
 
@@ -31,14 +31,14 @@ SITE_ID
 Usage
 =====
 
-Add contactBox into INSTALLED_APPS in settings.py.
+Add contactbox into INSTALLED_APPS in settings.py.
 
 in views.py:
 
 ::
 
-    from contactBox.views import ContactFormView
-    from contactBox.forms import ContactForm
+    from contactbox.views import ContactFormView
+    from contactbox.forms import ContactForm
 
 
     class ContactView(ContactFormView):
@@ -47,6 +47,6 @@ in views.py:
 
 Please also check:
 
-https://github.com/YD-Technology/contactBox/blob/master/contactBox/views.py
+https://github.com/YD-Technology/contactbox/blob/master/contactbox/views.py
 
-https://github.com/YD-Technology/contactBox/blob/master/test_project/templates/contact.html
+https://github.com/YD-Technology/contactbox/blob/master/test_project/templates/contact.html

@@ -18,7 +18,7 @@ INSTALLED_APPS = (
     'django.contrib.sites',
     'localflavor',
     'south',
-    'contactBox',
+    'contactbox',
 )
 
 SITE_ID = 1
