@@ -31,23 +31,20 @@ class Message(models.Model):
     def notify(self):
         receivers = Receiver.objects.filter(active=True)
         if receivers.count():
-            try:
-                site = Site.objects.get_current()
-                text_content = render_to_string('contactbox/email.txt',
-                                                {'contact': self,
-                                                 'site': site, })
-                msg = EmailMessage(
-                    settings.EMAIL_SUBJECT_PREFIX + ' Contact',
-                    text_content,
-                    settings.EMAIL_FROM,
-                    [r.email for r in receivers],
-                    headers={'Reply-To': self.email}
-                )
-                msg.send(fail_silently=False)
-                self.notification_date = datetime.now()
-                self.save()
-            except:
-                pass
+            site = Site.objects.get_current()
+            text_content = render_to_string('contactbox/email.txt',
+                                            {'contact': self,
+                                             'site': site, })
+            msg = EmailMessage(
+                settings.EMAIL_SUBJECT_PREFIX + ' Contact',
+                text_content,
+                settings.EMAIL_FROM,
+                [r.email for r in receivers],
+                headers={'Reply-To': self.email}
+            )
+            msg.send(fail_silently=False)
+            self.notification_date = datetime.now()
+            self.save()
 
 
 class Receiver(models.Model):

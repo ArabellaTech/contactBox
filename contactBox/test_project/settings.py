@@ -6,6 +6,7 @@ INSTALLED_APPS = (
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
+    'django.contrib.sites',
     'localflavor',
     'contactbox',
 )
@@ -15,6 +16,10 @@ DATABASES = {
         'ENGINE': 'django.db.backends.sqlite3',
     },
 }
+
+SITE_ID = 1
+
+EMAIL_FROM = 'test@test.com'
 
 project = lambda: os.path.dirname(os.path.realpath(__file__))
 location = lambda x: os.path.join(str(project()), str(x))

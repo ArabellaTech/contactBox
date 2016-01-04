@@ -28,5 +28,6 @@ class MainTestCase(TestCase):
         self.assertEqual(mail.outbox, [])
         self.assertIsNone(message.notification_date)
         call_command('remind_contact')
-        self.assertIsNorNone(message.notification_date)
+        message = Message.objects.get(pk=message.pk)
+        self.assertIsNotNone(message.notification_date)
         self.assertEqual(len(mail.outbox), 1)
