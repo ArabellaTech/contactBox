@@ -1,6 +1,5 @@
 import os
 import sys
-import django
 coverage = None
 try:
     from coverage import coverage
@@ -13,20 +12,9 @@ sys.path.insert(0, current_dirname)
 sys.path.insert(0, os.path.join(current_dirname, '..'))
 from django import setup
 setup()
-print 1
 from django.test.runner import DiscoverRunner
-print 2
-# if django.VERSION < (1, 9, 0):
-#     from django.db.models import get_app
-#     app = get_app('contactbox')
-#     print app
-# else:
-#     from django.apps import apps
-#     app = apps.get_app_config('contactbox').models
-#     print app
-print 3
+from django.apps import apps
 import fnmatch
-print 4
 
 # necessary for "python setup.py test"
 patterns = (
@@ -89,7 +77,6 @@ class TestSuiteRunner(DiscoverRunner):
 
         if coverage:
             cov.stop()
-            from django.apps import apps
             app = apps.get_app_config('contactbox').models
             modules = get_all_coverage_modules(app)
             cov.html_report(modules, directory='coverage')
