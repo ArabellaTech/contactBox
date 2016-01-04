@@ -24,6 +24,7 @@ class Message(models.Model):
 
     class Meta:
         ordering = ['-id']
+        app_label = 'contactbox'
 
     def short(self):
         return self.message[:10] + '...'
@@ -54,3 +55,6 @@ class Receiver(models.Model):
 
     def __unicode__(self):
         return self.name + ' (' + self.email + ')'
+
+    class Meta:
+        app_label = 'contactbox'
