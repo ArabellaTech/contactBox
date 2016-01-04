@@ -3,17 +3,18 @@ import sys
 from setuptools import setup, find_packages
 from pkg_resources import require, DistributionNotFound
 
+
 def local_open(fname):
     return open(os.path.join(os.path.dirname(__file__), fname))
 
 readme_file = os.path.abspath(os.path.join(os.path.dirname(__file__),
-    'README.rst'))
+                              'README.rst'))
 
 try:
     long_description = open(readme_file).read()
 except IOError as err:
     sys.stderr.write("[ERROR] Cannot find file specified as "
-        "long_description (%s)\n" % readme_file)
+                     "long_description (%s)\n" % readme_file)
     sys.exit(1)
 
 extra_kwargs = {}
@@ -45,13 +46,23 @@ setup(
     packages=find_packages(),
     license='MIT',
     scripts=[],
-    #test_suite="test_project.runtests.runtests",
+    test_suite="test_project.runtests.runtests",
     include_package_data=True,
     classifiers=[
-        'License :: OSI Approved :: MIT License',
+        'Development Status :: 5 - Production/Stable',
+        'Environment :: Web Environment',
         'Intended Audience :: Developers',
+        'License :: OSI Approved :: MIT License',
         'Operating System :: OS Independent',
         'Programming Language :: Python',
+        'Framework :: Django',
+        'Programming Language :: Python :: 2.6',
+        'Programming Language :: Python :: 2.7',
+        'Programming Language :: Python :: 3.3',
+        'Programming Language :: Python :: 3.4',
+        'Programming Language :: Python :: 3.5',
+        'Programming Language :: JavaScript',
+        'Topic :: Internet :: WWW/HTTP :: Site Management',
     ],
     **extra_kwargs
 )
