@@ -1,10 +1,7 @@
 import os
 import sys
-coverage = None
-try:
-    from coverage import coverage
-except ImportError:
-    coverage = None
+
+from coverage import coverage
 
 os.environ['DJANGO_SETTINGS_MODULE'] = 'contactbox.test_project.settings'
 current_dirname = os.path.dirname(__file__)
