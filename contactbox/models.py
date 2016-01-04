@@ -19,13 +19,6 @@ class Message(models.Model):
                                              null=True)
     unread = models.BooleanField(default=True)
 
-    def __unicode__(self):
-        return self.name
-
-    class Meta:
-        ordering = ['-id']
-        app_label = 'contactbox'
-
     def short(self):
         return self.message[:10] + '...'
 
@@ -46,6 +39,13 @@ class Message(models.Model):
             msg.send(fail_silently=False)
             self.notification_date = datetime.now()
             self.save()
+
+    def __unicode__(self):
+        return self.name
+
+    class Meta:
+        ordering = ['-id']
+        app_label = 'contactbox'
 
 
 class Receiver(models.Model):
