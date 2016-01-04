@@ -6,7 +6,7 @@ python:
   - "3.5"
 env:
     - DJANGO="django>=1.8,<1.8.999"
-    - DJANGO="django>=1.9,<2"
+    - DJANGO="django>=1.9,<1.9999"
 
 install:
  - pip install -r requirements.txt
